@@ -4,17 +4,42 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building the project'
             }
         }
-        stage('Test') {
+        stage('Unit tests') {
             steps {
-                echo 'Testing..'
+                echo 'Running unit tests'
             }
         }
-        stage('Deploy') {
+        stage('Integration tests') {
             steps {
-                echo 'Deploying....'
+                echo 'Running Integration tests'
+            }
+        }
+        stage('Package') {
+            steps {
+                echo 'Packaging the project'
+            }
+        }
+        stage('Deploy env 1') {
+            steps {
+                echo 'Deploying to env 1'
+            }
+        }
+        stage('API tests') {
+            steps {
+                echo 'Running Api Tests'
+            }
+        }
+        stage('UI tests') {
+            steps {
+                echo 'Running UI Tests'
+            }
+        }
+        stage('Deploy env 2') {
+            steps {
+                echo 'Deploying to env 2'
             }
         }
     }
